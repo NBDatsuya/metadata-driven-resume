@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+
+@media print {
+  @page {
+    size: A4; /* 或者使用具体的尺寸，如：21cm 29.7cm */
+    margin: 6cm;
+  }
+
+  body {
+    font-size: 12pt; /* 调整字体大小以适应页面 */
+  }
+}
+
+* {
+  font-family: InterVariable, 'Source Han Sans SC', emoji, 'Source Han Serif SC' sans-serif !important;
+  font-feature-settings: 'cv02', 'cv11';
+  font-variant-east-asian: simplified;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, 'Source Han Sans SC', emoji, 'Source Han Serif SC', sans-serif !important;
+    font-variant-east-asian: simplified;
+  }
+}
+
+@theme {
+  --color-header: #d5eaf9;
+  --color-bg: #d5eaf9;
+  --color-line: #2b98de;
+  --color-section-title: #092347;
+  --color-text-primary: #282828;
+  --color-text-blockquote: var(--color-slate-600);
+}
+
